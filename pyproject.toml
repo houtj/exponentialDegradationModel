@@ -1,14 +1,65 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
 [project]
-name = "sweco"
+name = "exponential-degradation-model"
 version = "0.1.0"
-description = "Add your description here"
+description = "A Python implementation of the exponential degradation model for remaining useful life (RUL) prediction"
 readme = "README.md"
-requires-python = ">=3.7"
-dependencies = [
-    "matplotlib>=3.5.3",
-    "notebook>=6.5.7",
-    "pandas>=1.1.5",
-    "plotly>=5.18.0",
-    "scikit-learn>=1.0.2",
-    "scipy>=1.7.3",
+requires-python = ">=3.8"
+license = {file = "LICENSE"}
+authors = [
+    {name = "Tianjun HOU", email = "houtj@example.com"},
 ]
+maintainers = [
+    {name = "Tianjun HOU", email = "houtj@example.com"},
+]
+keywords = [
+    "prognostics",
+    "remaining-useful-life",
+    "RUL",
+    "degradation-modeling",
+    "predictive-maintenance",
+    "reliability",
+    "exponential-degradation",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Scientific/Engineering",
+    "Topic :: Scientific/Engineering :: Information Analysis",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "build>=1.2.2.post1",
+    "numpy>=1.20.0",
+    "scipy>=1.7.0",
+    "twine>=6.1.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "matplotlib>=3.5.0",
+    "jupyter>=1.0.0",
+    "notebook>=6.5.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/houtj/exponentialDegradationModel"
+Repository = "https://github.com/houtj/exponentialDegradationModel"
+Issues = "https://github.com/houtj/exponentialDegradationModel/issues"
+Documentation = "https://github.com/houtj/exponentialDegradationModel#readme"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/exponential_degradation"]

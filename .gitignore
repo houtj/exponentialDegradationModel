@@ -6,10 +6,36 @@ dist/
 wheels/
 *.egg-info
 
-# data
-raw_data
 # Virtual environments
-.sweco
+.venv/
+venv/
+ENV/
+env/
+.sweco/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project-specific
+raw_data/
 *.ipynb
 *.pkl
 *.pdf
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Distribution
+*.egg
+.eggs/
+PUBLISHING.md
